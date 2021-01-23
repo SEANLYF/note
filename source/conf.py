@@ -4,8 +4,8 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import sphinx_rtd_theme
-import caktus_theme
-import sphinx_bernard_theme
+# import caktus_theme
+# import sphinx_bernard_theme
 import stanford_theme
 from recommonmark.parser import CommonMarkParser
 # html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
@@ -44,7 +44,6 @@ release = '1.0'
 # ones.
 extensions = [
         'recommonmark',
-        'sphinx_markdown_tables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -69,7 +68,7 @@ exclude_patterns = []
 # a list of builtin themes.
 #
 # html_theme = 'sphinx_rtd_theme'
-html_theme = 'classic'
+# html_theme = 'classic'
 # html_theme = 'caktus'
 # html_theme = 'insegel'
 # html_theme = 'sphinx_bernard_theme'
