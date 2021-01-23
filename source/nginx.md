@@ -6,16 +6,12 @@ nginx
 
 
 1. wget https://nginx.org/download/nginx-1.19.6.tar.gz
-
 2. tar -zxvf nginx-1.19.6.tar.gz
-
 3. cd nginx-1.19.6
-
 4. ./configure
-
 5. make
-
 6. make install
+7. /usr/local/nginx/nginx # 启动
 
 
 **错误及解决方法**

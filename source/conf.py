@@ -4,8 +4,15 @@
 # list see the documentation:
 # https://www.sphinx-doc.org/en/master/usage/configuration.html
 import sphinx_rtd_theme
+import caktus_theme
+import sphinx_bernard_theme
+import stanford_theme
 from recommonmark.parser import CommonMarkParser
-html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
+# html_theme_path = [caktus_theme.get_theme_dir()]
+# html_theme_path = [sphinx_bernard_theme.get_html_theme_path()]
+# html_sidebars = caktus_theme.default_sidebars()
+html_theme_path = [stanford_theme.get_html_theme_path()]
 # -- Path setup --------------------------------------------------------------
 
 # If extensions (or modules to document with autodoc) are in another directory,
@@ -37,6 +44,7 @@ release = '1.0'
 # ones.
 extensions = [
         'recommonmark',
+        'sphinx_markdown_tables',
 ]
 
 # Add any paths that contain templates here, relative to this directory.
@@ -60,8 +68,12 @@ exclude_patterns = []
 # The theme to use for HTML and HTML Help pages.  See the documentation for
 # a list of builtin themes.
 #
-html_theme = 'sphinx_rtd_theme'
-
+# html_theme = 'sphinx_rtd_theme'
+html_theme = 'classic'
+# html_theme = 'caktus'
+# html_theme = 'insegel'
+# html_theme = 'sphinx_bernard_theme'
+html_theme = 'stanford_theme'
 # Add any paths that contain custom static files (such as style sheets) here,
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".

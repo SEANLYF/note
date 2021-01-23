@@ -14,6 +14,7 @@ Welcome to notebook's documentation!
    test/i4t.md
    nginx.md
    2020/index
+   readthedocs.md
 
 
 Indices and tables
