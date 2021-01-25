@@ -9,12 +9,14 @@ Welcome to notebook's documentation!
 .. toctree::
    :maxdepth: 1
 
+   study_list.md
    amazon/index
-   test/test
-   test/i4t.md
    nginx.md
-   2020/index
+   readingnotes/index
    readthedocs.md
+   reStructuredText.md
+   restructuredtext
+   OnlineArticles/index
 
 
 Indices and tables

@@ -7,6 +7,8 @@ import sphinx_rtd_theme
 # import caktus_theme
 # import sphinx_bernard_theme
 # import stanford_theme
+import recommonmark
+from recommonmark.transform import AutoStructify
 from recommonmark.parser import CommonMarkParser
 html_theme_path = [sphinx_rtd_theme.get_html_theme_path()]
 # html_theme_path = [caktus_theme.get_theme_dir()]
@@ -77,3 +79,17 @@ html_theme = 'sphinx_rtd_theme'
 # relative to this directory. They are copied after the builtin static files,
 # so a file named "default.css" will overwrite the builtin "default.css".
 html_static_path = ['_static']
+
+# these paths are either relative to html_static_path or fully qualified paths
+# html_css_files = ['css/custom.css',]
+# html_js_files = ['js/customs.js',]
+
+
+
+
+
+def setup(app):
+    app.add_config_value('recommonmark_config',{
+        'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',}, True)
+    app.add_transform(AutoStructify)

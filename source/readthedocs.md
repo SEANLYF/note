@@ -121,3 +121,48 @@ source_parsers = {
 source_suffix = ['.rst', '.md']
 ```
 
+
+
+## AutoStructify配置
+
+```python
+# conf.py
+import recommonmark
+from recommonmark.transform import AutoStructify
+
+def setup(app):
+    app.add_config_value('recommonmark_config',{
+        'url_resolver': lambda url: github_doc_root + url,
+        'auto_toc_tree_section': 'Contents',
+    }, True)
+    app.add_transform(AutoStructify)
+```
+
+
+
+## Adding CSS or JavaScript
+
+```python
+# conf.py
+# these paths are either relative to html_static_path or fully qualified paths
+html_css_files = ['css/custom.css',]
+html_js_files = ['js/custom.js',]
+
+```
+
+
+
+## Overriding or replacing a theme's stylesheet
+
+```python
+# conf.py
+# if your replacement stylesheet exists at _static/css/yourtheme.css
+html_style = 'css/yourtheme.css'
+```
+
+## Cross-referencing with Sphinx
+
+```
+
+```
+
